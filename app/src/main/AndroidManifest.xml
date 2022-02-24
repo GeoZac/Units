@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="info.staticfree.android.units"
+	xmlns:tools="http://schemas.android.com/tools"
+	package="info.staticfree.android.units"
       android:versionName="1.0" android:versionCode="9">
 
       
@@ -11,7 +12,8 @@
         android:label="@string/app_name">
         <activity android:name=".Units"
         		android:theme="@android:style/Theme.Black.NoTitleBar"
-                android:label="@string/app_name" android:launchMode="singleTop">
+                android:label="@string/app_name" android:launchMode="singleTop"
+			android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -34,7 +36,9 @@
         
         <activity android:name=".UnitList"
         	android:theme="@android:style/Theme.Dialog"
-        	android:label="@string/app_name" android:launchMode="singleTop">
+        	android:label="@string/app_name" android:launchMode="singleTop"
+			android:exported="true"
+			tools:ignore="AppLinkUrlError">
         	
         	<intent-filter>
         		<data android:mimeType="vnd.android.cursor.dir/vnd.info.staticfree.android.units.unit_usage" />
@@ -52,7 +56,9 @@
         </activity>
                 	
         <activity android:name=".UnitDetails"
-        	android:label="@string/app_name">
+        	android:label="@string/app_name"
+			android:exported="true"
+			tools:ignore="AppLinkUrlError">
         	
         	<intent-filter>
         		<data android:mimeType="vnd.android.cursor.item/vnd.info.staticfree.android.units.unit_usage" />
