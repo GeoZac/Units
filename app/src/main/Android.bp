@@ -1,0 +1,21 @@
+// Blueprint file to build along with AOSP source code
+android_app {
+    name: "Units",
+
+    resource_dirs: ["res"],
+
+    srcs: [
+        "java/**/*.java",
+    ],
+
+    product_specific: true,
+
+    static_libs: [
+        "androidx.cursoradapter_cursoradapter",
+        "androidx.fragment_fragment",
+        "androidx.loader_loader"
+    ],
+
+    sdk_version: "current",
+
+}
